@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+:root{
+    --fff: #ddffeb;
+    --yel: #ffca00;
+    --bla: #1b1b22;
+}
+header{
+    height: 90px;
+    background: #1b1b22;
+}
+nav{
+    width: 100%;
+    /*max-width: 80%;*/
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 30px;
+    text-decoration: none;
+    display: flex;
+    gap: 0.5px;
+    font-weight: 700;
+    color: var(--fff);
+}
+.logo span{
+    color: var(--yel);
+}
+.hambarger{
+    visibility: hidden;
+    opacity: 0;
+}
+.nav_items{
+    display: flex;
+    gap: 20px;
+    margin-top: 15px !important;
+}
+.nav_items li{
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none;
+}
+.nav_items li a{
+    font-size: 16px !important;
+    color: var(--fff) !important;
+    letter-spacing: 2px !important;
+    position: relative;
+
+}
+.nav_items li a:hover{
+    color: var(--yel) !important;
+}
+.nav_items li a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--yel);
+    border-radius: 2px;
+    transition: all .3s ease;
+}
+.nav_items li a:hover::after{
+    width: 100%;
+}
+/* banner */
+.banner{
+    height: 86vh;
+    background: url(../img/Banner.jpg) no-repeat center;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ddffeb85;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.bn1_title{
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555558;
+}
+.bn2_title{
+    font-size: 80px;
+    font-weight: 800;
+    width: 550px;
+    line-height: 80px;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    color: var(--bla);
+}
+.bn2_title span{
+    text-transform: uppercase;
+    font-size: 35px;
+    position: relative;
+    top: -10px;
+    color: var(--yel);
+}
+.bn_text{
+    width: 500px;
+    margin-top: 20px ;
+    font-size: 18px;
+    font-weight: 300;
+    color: #555558;
+
+}
+.butn{
+    width: 100% !important;
+    display: flex;
+    justify-content: start;
+}
+.bn_btn {
+    width: 160px !important;
+    display: inline-block !important;
+    background: var(--yel) !important;
+    color: var(--bla) !important;
+    font-size: 18px !important ;
+    padding: 10px 0 !important;
+    font-weight: 500 !important;
+    box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all .3s ease;
+}
+
+.bn_btn:hover{
+    opacity: 0.8;
+}
+/* Javascript age comparing cards */
+.compare{
+    padding: 100px 0;
+    background: #fff;
+}
+.elm_parent{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.elm_parent input{
+    width: 100%;
+    border: 1px solid var(--yel);
+    padding: 10px 10px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.elm_parent button{
+    background: var(--yel);
+    padding: 8px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--bla);
+}
+.elm_parent button:hover{
+    background: #d6ab00 !important;
+    color: #555558;
+}
+.card{
+    box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.1);
+    border-style: none !important;
+    background: #e0e0e0;
+}
+.card:hover{
+    box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.2) !important;
+}
+.card img{
+    border-radius: 5px;
+    width: 100%;
+    height: 180px !important;
+    object-fit: cover;
+    filter:brightness(80%);
+    transition: all .3s ease;
+}
+.card:hover img{
+    filter:brightness(100%) !important;
+}
+.crds_parent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.card-body h4{
+    color: var(--bla);
+    font-size: 16px !important;
+    font-weight: 600;
+    
+}
+.card-body p{
+    color: #555558;
+    font-size: 15px;
+}
+/* Footer */
+footer{
+    width: 100%;
+    height: 50px;
+    background: var(--bla);
+    
+}
+footer p{
+    text-align: center;
+    color: #858585;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
