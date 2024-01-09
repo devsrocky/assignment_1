@@ -5,9 +5,8 @@
 }
 
 @media(max-width: 800px){
-    body{
+    body.active{
         overflow: hidden;
-
     }
     .nav_items{
         display: block;
@@ -89,5 +88,8 @@
     .butn{
 
         justify-content: center;
+    }
+    .crds_parent{
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 }
